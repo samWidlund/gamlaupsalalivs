@@ -23,15 +23,10 @@ Oavsett teknik, fokusera på:
 SEO (så butiken hittas på Google)
 
 
-   <script src="main.js"></script>
-        <div class="main bg-red-500">
-            <h1>GAMLA UPSALA LIVS</h1>
-            <div class="container">
-                <div class="text">
-                    <p>Orientaliskt & internationellt sortiment</p>
-                    <p>Livsmedel från hela världen</p>
-                    <p>Öppet tider 09:00-22:00</p>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.8358637543148!2d17.63956448037365!3d59.87392927482817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcd0026450941%3A0x7594d6e913a7a382!2sGamla%20Uppsala%20Livs!5e0!3m2!1ssv!2sse!4v1772570681141!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
+:root {
+  --bg: #020122;
+  --primary: #FF521B;
+  --secondary: #FC9E4F;
+  --accent: #EDD382;
+  --text: #F2F3AE;
+}
