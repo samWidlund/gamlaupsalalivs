@@ -269,8 +269,8 @@
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[url\(\/src\/img\/portrait\.jpeg\)\] {
-    background-image: url(/src/img/portrait.jpeg);
+  .bg-\[url\(src\/img\/portrait\.jpeg\)\] {
+    background-image: url(src/img/portrait.jpeg);
   }
   .from-amber-600 {
     --tw-gradient-from: var(--color-amber-600);
@@ -417,9 +417,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .lg\:bg-\[url\(\/src\/img\/landscape\.jpeg\)\] {
+  .lg\:bg-\[url\(src\/img\/landscape\.jpeg\)\] {
     @media (width >= 64rem) {
-      background-image: url(/src/img/landscape.jpeg);
+      background-image: url(src/img/landscape.jpeg);
     }
   }
 }
