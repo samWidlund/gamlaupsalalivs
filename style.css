@@ -26,12 +26,6 @@ html, body {
     align-items: center;
 }
 
-@media (max-width: 768px), (orientation: portrait) {
-    #landingpage {
-        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/portrait.jpeg');
-    }
-}
-
 .logo {
     background-color: rgba(250, 65, 20, 0.9);
     width: auto;
@@ -50,5 +44,9 @@ html, body {
     .logo {
         flex-direction: column;
         text-align: center;
+    }
+
+    #landingpage {
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/portrait.jpeg');
     }
 }
