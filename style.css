@@ -6,11 +6,11 @@
 
 html, body {
     height: 100%;
-    overflow: hidden;
 }
 
 :root {
     --primary-color: #FA4114;
+    --text-color: white;
 }
 
 /* color of logo: #FA4114 */
@@ -26,6 +26,26 @@ html, body {
     align-items: center;
 }
 
+#infopage {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.openhours {
+    color: var(--text-color);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    font-size: larger;
+    text-align: center;
+    background-color: rgba(250, 65, 20, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
 .logo {
     background-color: rgba(250, 65, 20, 0.9);
     width: auto;
@@ -39,6 +59,8 @@ html, body {
     display: flex;
     gap: 0.5rem;
 }
+
+
 
 @media (max-width: 768px), (orientation: portrait) {
     .logo {
