@@ -9,16 +9,11 @@ html, body {
 }
 
 :root {
-    --primary-color: #e85a24;
-    --primary-dark: #c44a1c;
-    --primary-light: #f07b3f;
-    --text-color: #333333;
-    --text-light: #ffffff;
-    --background-light: #f8f6f4;
-    --element-padding: 1rem;
+    --primary-color: #990011;
+    --primary-light: #f3eced;
+    --text-color: white;
 }
 
-/* color of logo: #FA4114 */
 
 #landingpage {
     width: 100%;
@@ -33,7 +28,7 @@ html, body {
 
 #infopage {
     width: 100%;
-    background-color: var(--background-light);
+    background-color: var(--primary-light);
     color: var(--text-color);
     display: flex;
     justify-content: center;
@@ -43,32 +38,38 @@ html, body {
 
 #infopage h1 {
     text-align: center;
-    color: var(--primary-dark);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
 
 .logo {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: rgba(153, 0, 17, 0.8);
+    color: var(--text-color);
     font-weight: 700;
-    font-size: 2.5rem;
-    padding: 2.5rem 3rem;
+    font-size: 1.5rem;
+    padding: 2rem 2.5rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     display: flex;
     gap: 0.5rem;
+    margin-top: 6rem;
     box-shadow: 0 8px 32px rgba(200, 74, 28, 0.4);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
 }
 
+.opening-hours {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 #navbar  {
     width: 100%;
-    background-color: var(--primary-dark);
+    background-color: var(--primary-color);
     position:fixed;
     padding: 1rem 2rem;
-    color: var(--text-light);
+    color: var(--text-color);
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
