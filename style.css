@@ -9,8 +9,12 @@ html, body {
 }
 
 :root {
-    --primary-color: #FA4114;
-    --text-color: white;
+    --primary-color: #e85a24;
+    --primary-dark: #c44a1c;
+    --primary-light: #f07b3f;
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --background-light: #f8f6f4;
     --element-padding: 1rem;
 }
 
@@ -29,41 +33,47 @@ html, body {
 
 #infopage {
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--background-light);
     color: var(--text-color);
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 1rem;
+    padding: 4rem 2rem;
 }
 
 #infopage h1 {
     text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .logo {
-    background-color: rgba(250, 65, 20, 0.9);
-    width: auto;
-    height: auto;
-    color: #fff;
-    font-weight: bold;
-    font-size: xx-large;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 2.5rem 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     display: flex;
     gap: 0.5rem;
+    box-shadow: 0 8px 32px rgba(200, 74, 28, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
 }
 
 #navbar  {
     width: 100%;
-    background-color: rgba(250, 65, 20, 0.8);
+    background-color: var(--primary-dark);
     position:fixed;
-    padding: 0.5rem;
-    color: var(--text-color);
+    padding: 1rem 2rem;
+    color: var(--text-light);
     display: flex;
-    justify-content: end;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
 }
 
 
