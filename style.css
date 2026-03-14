@@ -11,6 +11,7 @@ html, body {
 :root {
     --primary-color: #FA4114;
     --text-color: white;
+    --element-padding: 1rem;
 }
 
 /* color of logo: #FA4114 */
@@ -29,6 +30,15 @@ html, body {
 #infopage {
     width: 100%;
     background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+#infopage h1 {
+    text-align: center;
 }
 
 .openhours {
