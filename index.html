@@ -1,35 +1,106 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamla Upsala Livs</title>
+    <title>Gamla Upsala Livs - Din lokala orientala matbutik i Uppsala</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div id="navbar">
-            <span class="company-navbar">
-                Gamla Upsala Livs
-            </span>
-            <div class="nav-items">
-                <span>Kontakt</span>
-                <span>Om oss</span>
-                <span>Hitta hit</span>
+    <nav id="navbar">
+        <span class="navbar-brand">Gamla Upsala Livs</span>
+        <div class="navbar-links">
+            <a href="#hero">Hem</a>
+            <a href="#om-oss">Om oss</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Gamla Upsala Livs</h1>
+            <p class="hero-tagline">Din lokala matbutik med smaker från hela världen</p>
+        </div>
+    </section>
+
+    <section id="om-oss">
+        <div class="container">
+            <h2>Om oss</h2>
+            <div class="om-oss-content">
+                <div class="om-oss-text">
+                    <p>
+                        Välkommen till Gamla Upsala Livs! Vi är din lokala matbutik i hjärtat av Gamla Uppsala. 
+                        Hos oss hittar du ett brett utbud av orientaliska och internationella livsmedel - från 
+                        kryddor och oljor till specialsorter som du inte hittar någon annanstans.
+                    </p>
+                    <p>
+                        Utöver vårt utbud av orientaliska produkter finns även svenska basvaror som mjölk, smör 
+                        och bröd - allt du behöver, även när du minst anar det. Vi erbjuder kvalitetsprodukter 
+                        till rätt pris, med en personlig service som bara en lokalt ägd butik kan ge.
+                    </p>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öppettider</h3>
+                    <p class="days">Alla dagar</p>
+                    <p class="time"><strong>9:00 - 23:00</strong></p>
+                </div>
             </div>
         </div>
-        <div id="landingpage">
-            <div>
-           </div>
-    </div>
-    <div id="infopage">
-        <div>
-            <h1>Hitta hit</h1>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.506018081788!2d17.637627012920586!3d59.8739481747779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcd0026450941%3A0x7594d6e913a7a382!2sGamla%20Uppsala%20Livs!5e0!3m2!1ssv!2sse!4v1773485602657!5m2!1ssv!2se" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <div class="kontakt-content">
+                <div class="kontakt-info">
+                    <div class="kontakt-item">
+                        <h3>Adress</h3>
+                        <p>Djäknegatan 90</p>
+                        <p>754 25 Uppsala</p>
+                    </div>
+                    <div class="kontakt-item">
+                        <h3>Telefon</h3>
+                        <p>072-123 45 67</p>
+                    </div>
+                    <div class="kontakt-item">
+                        <h3>E-post</h3>
+                        <p>info@gamlaupsalalivs.se</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.506018081788!2d17.637627012920586!3d59.8739481747779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcd0026450941%3A0x7594d6e913a7a382!2sGamla%20Uppsala%20Livs!5e0!3m2!1ssv!2sse!4v1773485602657!5m2!1ssv!2se" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Gamla Upsala Livs</h3>
+                    <p>Din lokala matbutik med smaker från hela världen</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>072-123 45 67</strong></p>
+                    <p>info@gamlaupsalalivs.se</p>
+                    <p>Djäknegatan 90, 754 25 Uppsala</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gamla Upsala Livs. Alla rättigheter förbehållna.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
