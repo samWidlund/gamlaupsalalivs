@@ -2,38 +2,24 @@
 
 ## Project Overview
 
-This is a simple static website for a grocery store in Uppsala, Sweden. The project consists of HTML, CSS, and vanilla JavaScript with no build system or framework.
+Simple static website for Gamla Upsala Livs grocery store in Uppsala, Sweden. No build system or framework - vanilla HTML, CSS, and JavaScript.
 
 ## Build / Lint / Test Commands
 
-This project has no build system, linting, or test framework configured.
+No build system, linting, or tests configured.
 
-### Running the Project
-
-Open `index.html` directly in a browser, or use a simple HTTP server:
-
+**Running locally:**
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Node.js (if installed)
+# Node.js
 npx serve .
 ```
 
-### Testing
+**Adding tests (if needed):** Vitest for unit tests, Playwright for e2e.
 
-No tests are configured. If you add tests in the future, prefer:
-
-- **Vitest** for JavaScript unit tests (works well with Vite)
-- **Playwright** for end-to-end browser testing
-
-### Linting
-
-No linter is configured. If you add one, consider:
-
-- **ESLint** for JavaScript linting
-- **Prettier** for code formatting
-- **stylelint** for CSS linting
+**Adding linting (if needed):** ESLint for JS, Prettier for formatting, stylelint for CSS.
 
 ## Code Style Guidelines
 
@@ -41,18 +27,14 @@ No linter is configured. If you add one, consider:
 
 - Keep files small and focused
 - Use semantic HTML5 elements
-- Write CSS using modern features (CSS variables, flexbox, grid)
-- Use vanilla JavaScript (no frameworks unless explicitly requested)
+- Use vanilla JavaScript (no frameworks)
 
 ### HTML
 
-- Use lowercase tags and attributes
-- Use double quotes for attributes
-- Include `lang` attribute on `<html>` for accessibility
-- Include meta viewport for responsive design
-- Use meaningful, descriptive class names (lowercase, hyphen-separated)
+- Lowercase tags and attributes, double quotes
+- Include `lang="sv"` on `<html>`, viewport meta tag
+- Meaningful class names (lowercase, hyphen-separated)
 
-Example:
 ```html
 <!DOCTYPE html>
 <html lang="sv">
@@ -73,17 +55,15 @@ Example:
 
 ### CSS
 
-- Use CSS custom properties (variables) for colors and reusable values
-- Use flexbox and grid for layouts
-- Follow BEM naming convention for complex components: `block__element--modifier`
-- Keep selectors simple and avoid deep nesting
-- Group related styles together
-- Put global styles first, then component styles
+- CSS custom properties (variables) for colors and spacing
+- Flexbox and grid for layouts
+- BEM naming for complex components: `block__element--modifier`
+- Simple selectors, avoid deep nesting
+- Global styles first, then component styles
 
-Example:
 ```css
 :root {
-    --primary-color: #FA4114;
+    --primary-color: #990011;
     --spacing-unit: 8px;
 }
 
@@ -102,15 +82,13 @@ Example:
 
 ### JavaScript
 
-- Use ES6+ syntax (const/let, arrow functions, template literals)
-- Use strict mode
-- Declare variables with `const` by default, `let` when reassignment is needed
-- Avoid global variables; wrap code in IIFE or use modules
-- Use meaningful variable and function names (camelCase)
-- Add semicolons at statement ends
-- Use JSDoc comments for functions
+- ES6+ syntax (const/let, arrow functions, template literals)
+- Use strict mode: `'use strict';`
+- `const` by default, `let` when reassignment needed
+- Wrap code in IIFE or use modules to avoid globals
+- Meaningful names (camelCase), add semicolons
+- JSDoc comments for functions
 
-Example:
 ```javascript
 'use strict';
 
@@ -124,17 +102,15 @@ function calculateTotal(price, taxRate) {
     return price * (1 + taxRate);
 }
 
-const prices = [100, 200, 300];
-const totals = prices.map(price => calculateTotal(price, 0.25));
+const totals = [100, 200, 300].map(price => calculateTotal(price, 0.25));
 ```
 
 ### Error Handling
 
 - Use try/catch for code that may throw
 - Provide meaningful error messages
-- Handle errors gracefully (show user-friendly messages, don't expose internals)
+- Handle errors gracefully (user-friendly messages)
 
-Example:
 ```javascript
 try {
     const data = JSON.parse(jsonString);
@@ -151,56 +127,35 @@ try {
 |------|------------|---------|
 | Files | lowercase, hyphen-separated | `main.js`, `contact-form.css` |
 | HTML classes | lowercase, hyphen-separated | `.main-header`, `.product-card` |
-| JavaScript variables/functions | camelCase | `calculateTotal()`, `isValid` |
-| JavaScript constants | UPPER_SNAKE_CASE | `MAX_ITEMS`, `API_BASE_URL` |
+| JS variables/functions | camelCase | `calculateTotal()`, `isValid` |
+| JS constants | UPPER_SNAKE_CASE | `MAX_ITEMS`, `API_BASE_URL` |
 | CSS custom properties | lowercase, hyphen-separated | `--primary-color` |
 
 ### Accessibility
 
-- Use semantic HTML elements (`<main>`, `<nav>`, `<header>`, `<footer>`)
-- Include alt text for images
-- Use sufficient color contrast
-- Ensure keyboard navigation works
-- Use ARIA attributes when needed
+- Semantic HTML (`<main>`, `<nav>`, `<header>`, `<footer>`)
+- Alt text for images
+- Sufficient color contrast
+- Keyboard navigation support
+- ARIA attributes when needed
 
 ### Performance
 
 - Minimize CSS and JavaScript
-- Use lazy loading for images
-- Optimize images (use appropriate formats and sizes)
+- Lazy load images
+- Optimize images (formats and sizes)
 - Defer non-critical JavaScript
-
-### Version Control
-
-- Make small, focused commits
-- Write clear commit messages describing what and why
-- Don't commit generated files, dependencies, or secrets
-
-### Adding Dependencies
-
-If you need a build system or framework, consider:
-
-- **Vite** - Fast build tool, great for vanilla JS or frameworks
-- **Parcel** - Zero-config bundler
-- **esbuild** - Very fast bundler
-
-To add Vite:
-```bash
-npm create vite@latest . -- --template vanilla
-npm install
-npm run dev
-```
 
 ## Project Structure
 
 ```
 /
 ├── index.html      # Main HTML file
-├── style.css      # Main stylesheet
-├── main.js        # Main JavaScript file
-├── img/           # Images
-├── LICENSE        # License file
-└── README.md      # Project readme
+├── style.css       # Main stylesheet
+├── main.js         # Main JavaScript file
+├── img/            # Images
+├── LICENSE
+└── README.md
 ```
 
 ## Common Tasks
@@ -209,15 +164,21 @@ npm run dev
 
 1. Create new HTML file (e.g., `about.html`)
 2. Copy header/footer from `index.html`
-3. Add link to the new page in navigation
+3. Add navigation link
 
 ### Adding a new script
 
 1. Create new JS file in root or `js/` folder
 2. Import in HTML: `<script src="main.js"></script>`
-3. Or use ES modules: `<script type="module" src="js/module.js"></script>`
+3. Or ES modules: `<script type="module" src="js/module.js"></script>`
 
 ### Adding styles
 
 1. Add CSS to `style.css` or create component-specific CSS file
 2. Import in HTML `<head>` after main stylesheet
+
+## Version Control
+
+- Small, focused commits
+- Clear commit messages (describe what and why)
+- Don't commit generated files, dependencies, or secrets
