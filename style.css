@@ -21,6 +21,9 @@ html, body {
     --text-muted: #666666;
     --spacing-unit: 8px;
     --container-width: 1200px;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+    --transition-slow: 0.6s ease;
 }
 
 body {
@@ -55,13 +58,20 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--primary-color);
-    padding: 1rem 2rem;
+    background-color: transparent;
+    padding: 1.5rem 2rem;
     display: flex;
     justify-content: end;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
     z-index: 1000;
+    transition: background-color var(--transition-medium), padding var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+#navbar.scrolled {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-brand {
@@ -80,11 +90,27 @@ p {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.2s ease;
+    position: relative;
+    transition: opacity var(--transition-fast);
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width var(--transition-medium);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
 }
 
 .navbar-links a:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 #hero {
@@ -109,6 +135,9 @@ p {
     margin-bottom: calc(var(--spacing-unit) * 2);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     font-weight: 700;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 .hero-tagline {
@@ -116,6 +145,66 @@ p {
     margin-bottom: calc(var(--spacing-unit) * 1);
     text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
     font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-medium), transform var(--transition-medium);
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll.visible .animate-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.opening-hours,
+.kontakt-item,
+.map-container {
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.opening-hours:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(153, 0, 17, 0.3);
+}
+
+.kontakt-item {
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: 8px;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.kontakt-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 #om-oss {
